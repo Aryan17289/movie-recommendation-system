@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Movie Recommendation System</h1>
+        </header>
+
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="movie-input" placeholder="Enter a movie name...">
+                <button id="recommend-btn">🔍 Recommend</button>
+            </div>
+        </section>
+
+        <section class="filters">
+            <select id="genre-filter">
+                <option value="">Genre</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+            </select>
+
+            <select id="year-filter">
+                <option value="">Year</option>
+            </select>
+
+            <select id="rating-filter">
+                <option value="">Rating</option>
+                <option value="8+">8+</option>
+                <option value="7+">7+</option>
+                <option value="6+">6+</option>
+            </select>
+        </section>
+
+        <section id="movie-list">
+            <h2>Recommended Movies</h2>
+            <div id="movies" class="movies-grid"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
